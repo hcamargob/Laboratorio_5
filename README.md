@@ -36,6 +36,9 @@ Se realizó la identificacion del espacio de trabajo con Dinamixel, observando l
   
   ![image](https://user-images.githubusercontent.com/112737454/200098852-cb014428-6780-4895-9ee4-5217d8b0eaf0.png)
   
+  [![image](https://user-images.githubusercontent.com/112737454/200102225-f98399ba-9005-421c-9a72-0596df9db4bd.png)](https://www.youtube.com/watch?v=aqmeTjIOSUI&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=1)
+
+  
 Se parametrizó en Desmos, y este software permitió la ubicación de las trayectorias en el espacio de trabajo, los calculos se hicieron respecto a lo obtenido y dispuesto en Desmos.
   
    ![image](https://user-images.githubusercontent.com/112737454/200098953-a57eb504-1ea2-4062-883c-fee8a54d1af6.png)
@@ -272,5 +275,22 @@ Luego de esto el programa está listo para recibir instrucciones.
   ![image](https://user-images.githubusercontent.com/112737454/200101436-8e2423fe-1e8e-4756-8cef-fabda1a6dae1.png)
 
   [![image](https://user-images.githubusercontent.com/112737454/200101487-7f2f0b3d-8692-49ba-be62-8d0d7b6553a7.png)](https://www.youtube.com/watch?v=_FyVG7ztp2E&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=3)
+
+  3) Trébol
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200101946-7e9d5d88-9fbc-4b4f-9134-646f6e8f283c.png)
+![image](https://user-images.githubusercontent.com/112737454/200101976-35968ce1-7a20-444a-b92d-ea99055a9f90.png)
+
+ [![image](https://user-images.githubusercontent.com/112737454/200102001-9db976d2-9ebf-442d-bc63-5db6c183cd36.png)](https://www.youtube.com/watch?v=-36fzap_axY&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=4)
+  
+  4) Puntos Equidistantes
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200102101-5202b3a8-ef09-48ac-8686-ae3b986e3a3b.png)
+  ![image](https://user-images.githubusercontent.com/112737454/200102134-a1ee591d-b43c-4b24-b0f0-ef838be0b91b.png)
+  
+  [![image](https://user-images.githubusercontent.com/112737454/200102165-fc58a3ba-2547-4045-bba1-ca9f0f1bf7e7.png)](https://www.youtube.com/watch?v=T0nJiAJR6Ag&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=5)
+
+
+
 
 
