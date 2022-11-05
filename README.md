@@ -21,3 +21,5 @@ Facultad de Ingeniería
 Universidad Nacional de Colombia Sede Bogotá
 
 Para cumplir satisfactoriamente los requerimientos y tareas propuestas, se siguió el siguiente proceso:
+### 1. Identificación del espacio de trabajo
+Se realizó la identificacion del espacio de trabajo con Dinamixel, observando la mayor elongación del brazo y realizando el movimiento de la primera articulación, despues se realiza lo mismo con la elongación mínima. Así pues, se obtiene el espacio alcanzable por el Robot Phantom X.
