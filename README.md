@@ -194,9 +194,19 @@ Este es el resultado esperado
   
 ### 5. Resultados
   Finalmente, observamos los resultados
-  1)Letras
+  
+  1) Letras
   
   ![image](https://user-images.githubusercontent.com/112737454/200101064-0efab978-44b3-40bf-a37e-bc562f99ed91.png)
 ![image](https://user-images.githubusercontent.com/112737454/200101160-92d7897b-fad5-45b0-8894-0138ab7350d2.png)
 
 [![image](https://user-images.githubusercontent.com/112737454/200101276-01a4a3f4-aaa3-4d7d-b096-9365fac396f3.png)](https://www.youtube.com/watch?v=DCI5xsrFhLw&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=2)
+  
+  2) Figuras
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200101400-0989fb15-a0b9-4ebd-bf00-dbfe82abc1b8.png)
+  ![image](https://user-images.githubusercontent.com/112737454/200101436-8e2423fe-1e8e-4756-8cef-fabda1a6dae1.png)
+
+  [![image](https://user-images.githubusercontent.com/112737454/200101487-7f2f0b3d-8692-49ba-be62-8d0d7b6553a7.png)](https://www.youtube.com/watch?v=_FyVG7ztp2E&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=3)
+
+
