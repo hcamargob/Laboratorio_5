@@ -23,6 +23,8 @@ Universidad Nacional de Colombia Sede Bogotá
 Para cumplir satisfactoriamente los requerimientos y tareas propuestas, se siguió el siguiente proceso:
 
   ### 1. Cinemática Inversa
+  
+  Teniendo en cuenta la cinemática directa del robot Phantom, se realizó la cinemática inversa de este por medio del método geométrico. Se supuso la última articulación como muñeca, siempre horizontal para simplificar el problema, de esta forma no se necesita pedir una orientación específica, sino que siempre sea igual, para que solo sea necesario dar las coordenadas en (x,y,z). De esta forma, la articulación 1 se puede hallar solo con las coordenadas (x,y)  y las articulaciones 2 y 3 se hallan con cinemática inversa de un robot 2GDL, la articulación 4 depende de las anteriores para quedar horizontal y la articulación 5 trabaja como una herramienta y no tiene relación alguna con las demás, solo se varía cuando se quiere agarrar o soltar el marcador. Las ecuaciones están descritas así:
   ### 2. Identificación del espacio de trabajo
 Se realizó la identificacion del espacio de trabajo con Dinamixel, observando la mayor elongación del brazo y realizando el movimiento de la primera articulación, despues se realiza lo mismo con la elongación mínima. Así pues, se obtiene el espacio alcanzable por el Robot Phantom X.
   
@@ -192,6 +194,28 @@ Este es el resultado esperado
 
 ### 4. Python
   
+  Se creó un código en Python para que el robot realice las rutinas creadas previamente por medio del ingreso de comandos por teclado, solo se requiere tener la cinemática inversa realizada para cada trayectoria y poner la secuencia de ángulos de las articulaciones en el programa. Dependiendo de la tecla ingresada el robot realizará una rutina diferente, el código queda así:
+```
+//Codigo1
+```
+Aquí se usan las funciones hacer_trayectoria() e ir_a_punto() que están definidas así:
+```
+//Codigo2
+```
+Para que el robot realice las rutinas se debe conectar al puerto USB, se debe abrir un terminal y escribir el comando:
+```
+roscore
+```
+En otro terminal se debe ir a la ubicación del catkin workspace e ingresar los comandos:
+```
+source devel/setup.bash
+roslaunch dynamixel_one_motor one_controller.launch
+```
+Por último, en otro terminal se debe ir a la carpeta de scripts del proyecto y correr el archivo del código creado:
+```
+python3 jointPub.py
+```
+Luego de esto el programa está listo para recibir instrucciones.
 ### 5. Resultados
   Finalmente, observamos los resultados
   
