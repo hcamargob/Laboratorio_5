@@ -190,3 +190,13 @@ Este es el resultado esperado
   
   ![image](https://user-images.githubusercontent.com/112737454/200100356-7054c005-6884-4cd4-8034-6050dcb91494.png)
 
+### 4. Python
+  
+### 5. Resultados
+  Finalmente, observamos los resultados
+  1)Letras
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200101064-0efab978-44b3-40bf-a37e-bc562f99ed91.png)
+![image](https://user-images.githubusercontent.com/112737454/200101160-92d7897b-fad5-45b0-8894-0138ab7350d2.png)
+
+[![image](https://user-images.githubusercontent.com/112737454/200101276-01a4a3f4-aaa3-4d7d-b096-9365fac396f3.png)](https://www.youtube.com/watch?v=DCI5xsrFhLw&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=2)
