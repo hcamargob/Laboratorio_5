@@ -21,7 +21,9 @@ Facultad de Ingeniería
 Universidad Nacional de Colombia Sede Bogotá
 
 Para cumplir satisfactoriamente los requerimientos y tareas propuestas, se siguió el siguiente proceso:
-### 1. Identificación del espacio de trabajo
+
+  ### 1. Cinemática Inversa
+  ### 2. Identificación del espacio de trabajo
 Se realizó la identificacion del espacio de trabajo con Dinamixel, observando la mayor elongación del brazo y realizando el movimiento de la primera articulación, despues se realiza lo mismo con la elongación mínima. Así pues, se obtiene el espacio alcanzable por el Robot Phantom X.
   
   Este fue el espacio de trabajo:
@@ -33,7 +35,7 @@ Se parametrizó en Desmos, y este software permitió la ubicación de las trayec
    ![image](https://user-images.githubusercontent.com/112737454/200098953-a57eb504-1ea2-4062-883c-fee8a54d1af6.png)
 
 
-### 2. Construcción de Trayectorias 
+### 3. Construcción de Trayectorias 
   Para cada trayectoria se realizó una parametrización en MatLab, las cuales fueron:
   1) Letras
   Se calcularon las trayectorias de las letras S y H a través de rectas y arcos, de la siguiente manera:
@@ -150,3 +152,41 @@ Este es el resultado esperado
   Este es el resultado esperado:
   
   ![image](https://user-images.githubusercontent.com/112737454/200099746-12f32a59-f3e7-4618-95e8-f641a49e5510.png)
+
+  3) Trayectoria propia
+  Se eligió realizar una estrella suavizada de 5 puntas. Esta se parametrizó a través de funciones polares:
+  ```
+  %Trebol
+
+  ttr=0:0.2:2*pi;
+  XTR=[-136 cos(ttr).*7.*(cos(5*ttr)+5)-178 -136 ];
+  YTR=[-171 sin(ttr).*7.*(cos(5*ttr)+5)-171 -171 ];
+  ZTR=[30 -11*ones(1,length(ttr)) 30 ];
+
+  PTR=[XTR' YTR' ZTR'];
+  ```
+  Se espera el siguiente resultado:
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200100112-461ddff3-e927-474d-8fcd-8dd159c899cc.png)
+
+  4) Puntos Equidistantes
+  
+  Para estos puntos, se siguió una estructura pentagonal y se obtuvo
+  
+  ```
+  %Puntos
+
+  tp=0:2*pi/5:2*pi;
+  xpui=-230+30*cos(tp);
+  ypui=-110+30*sin(tp);
+
+  XPui=[xpui(1) xpui(1) xpui(1) xpui(2) xpui(2) xpui(2) xpui(3) xpui(3) xpui(3) xpui(4) xpui(4) xpui(4) xpui(5) xpui(5) xpui(5) -250];
+  YPui=[ypui(1) ypui(1) ypui(1) ypui(2) ypui(2) ypui(2) ypui(3) ypui(3) ypui(3) ypui(4) ypui(4) ypui(4) ypui(5) ypui(5) ypui(5) 0];
+  ZPui=[30 -10 30 30 -10 30 30 -10 30 30 -10 30 30 -10 30 30];
+
+  PPui=[XPui' YPui' ZPui'];
+  ```
+  Se espera:
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200100356-7054c005-6884-4cd4-8034-6050dcb91494.png)
+
