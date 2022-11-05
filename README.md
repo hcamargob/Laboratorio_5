@@ -25,6 +25,10 @@ Para cumplir satisfactoriamente los requerimientos y tareas propuestas, se sigui
   ### 1. Cinemática Inversa
   
   Teniendo en cuenta la cinemática directa del robot Phantom, se realizó la cinemática inversa de este por medio del método geométrico. Se supuso la última articulación como muñeca, siempre horizontal para simplificar el problema, de esta forma no se necesita pedir una orientación específica, sino que siempre sea igual, para que solo sea necesario dar las coordenadas en (x,y,z). De esta forma, la articulación 1 se puede hallar solo con las coordenadas (x,y)  y las articulaciones 2 y 3 se hallan con cinemática inversa de un robot 2GDL, la articulación 4 depende de las anteriores para quedar horizontal y la articulación 5 trabaja como una herramienta y no tiene relación alguna con las demás, solo se varía cuando se quiere agarrar o soltar el marcador. Las ecuaciones están descritas así:
+
+![cinematica_inv](https://user-images.githubusercontent.com/42346345/200101798-f9666ec0-92f0-4d7d-8d84-bad10b423dad.png)
+
+
   ### 2. Identificación del espacio de trabajo
 Se realizó la identificacion del espacio de trabajo con Dinamixel, observando la mayor elongación del brazo y realizando el movimiento de la primera articulación, despues se realiza lo mismo con la elongación mínima. Así pues, se obtiene el espacio alcanzable por el Robot Phantom X.
   
