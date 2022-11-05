@@ -25,8 +25,11 @@ Para cumplir satisfactoriamente los requerimientos y tareas propuestas, se sigui
 Se realizó la identificacion del espacio de trabajo con Dinamixel, observando la mayor elongación del brazo y realizando el movimiento de la primera articulación, despues se realiza lo mismo con la elongación mínima. Así pues, se obtiene el espacio alcanzable por el Robot Phantom X.
   
   Este fue el espacio de trabajo:
+  
   ![image](https://user-images.githubusercontent.com/112737454/200098852-cb014428-6780-4895-9ee4-5217d8b0eaf0.png)
+  
 Se parametrizó en Desmos, y este software permitió la ubicación de las trayectorias en el espacio de trabajo, los calculos se hicieron respecto a lo obtenido y dispuesto en Desmos.
+  
    ![image](https://user-images.githubusercontent.com/112737454/200098953-a57eb504-1ea2-4062-883c-fee8a54d1af6.png)
 
 
@@ -83,3 +86,67 @@ Se parametrizó en Desmos, y este software permitió la ubicación de las trayec
   ZS=[30 -10*ones(1,length(XS)-2) 30];
   PS=[XS' YS' ZS'];
   ```
+  Se combinaron en una sola rutina y asi se obtuvo el vector de puntos de las trayectorias.
+  ```
+  XLet=[XS XH -250];
+  YLet=[YS YH 0];
+  ZLet=[ZS ZH 30];
+  PLet=[XLet' YLet' ZLet'];
+  ```
+Este es el resultado esperado
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200099349-dedbee58-878f-4336-9b99-a76551194447.png)
+
+ 2) Figuras
+  Parametrizando rectas y curvas, entendiendo el orden de los puntos, se obtuvo:
+  ```
+  %Triángulo
+
+  xt1=-276:4:-256;
+  xt2=-256:4:-236;
+  xt3=-276:4:-236;
+
+  xt3in=-236-xt3-276;
+  yt1=tan(pi/3)*(xt1+276)+28;
+  yt2=-tan(pi/3)*(xt2+236)+28;
+  yt3=ones(1,length(xt3))*28;
+
+  XT=[-276 xt1 xt2 xt3in -276];
+  YT=[28 yt1 yt2 yt3 28];
+  ZT=[30 -10*ones(1,length(XT)-2) 30];
+  PT=[XT' YT' ZT'];
+  ```
+  ```
+  %Círculo
+
+  tc=0:0.2:2*pi;
+  XC=[-210 20*cos(tc)-230 -210];
+  YC=[0 20*sin(tc) 0];
+  ZC=[30 -10*ones(1,length(XC)-2) 30];
+  PC=[XC' YC' ZC'];
+  ```
+  ```
+  %Paralelas
+
+  xp1=-260:10:-230;
+  yp1=tan(pi/6)*(xp1+260)-47;
+  yp2=tan(pi/6)*(xp1+260)-67;
+  yp3=tan(pi/6)*(xp1+260)-87;
+
+  XP=[-260 xp1 -230 -260 xp1 -230 -260 xp1 -230];
+  YP=[yp1(1) yp1 yp1(length(yp1)) yp2(1) yp2 yp2(length(yp3)) yp3(1) yp3 yp3(length(yp3))];
+  ZP=[30 -10*ones(1,length(xp1)) 30 30 -10*ones(1,length(xp1)) 30 30 -10*ones(1,length(xp1)) 30];
+
+  PP=[XP' YP' ZP'];
+  ```
+  Se unieron todas las figuras en una sola trayectoria, se obtuvo:
+  ```
+  XFIG=[XT XC XP -250];
+  YFIG=[YT YC YP 0];
+  ZFIG=[ZT ZC ZP 30];
+
+  PFIG=[XFIG' YFIG' ZFIG'];
+  ```
+  Este es el resultado esperado:
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200099746-12f32a59-f3e7-4618-95e8-f641a49e5510.png)
