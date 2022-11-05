@@ -196,11 +196,47 @@ Este es el resultado esperado
   
   Se creó un código en Python para que el robot realice las rutinas creadas previamente por medio del ingreso de comandos por teclado, solo se requiere tener la cinemática inversa realizada para cada trayectoria y poner la secuencia de ángulos de las articulaciones en el programa. Dependiendo de la tecla ingresada el robot realizará una rutina diferente, el código queda así:
 ```
-//Codigo1
+def joint_publisher():
+    pub = rospy.Publisher('/joint_trajectory', JointTrajectory, queue_size=0)
+    rospy.init_node('joint_publisher', anonymous=False)
+    
+    while not rospy.is_shutdown():
+        key='0'
+        key=input()
+        if key=='1':
+            hacer_trayectoria(home,pub)
+        elif key=='2':
+            hacer_trayectoria(tomar_marcador,pub)
+        elif key=='3':
+            hacer_trayectoria(espacio_trabajo,pub)
+        elif key=='4':
+            hacer_trayectoria(letras,pub)
+        elif key=='5':
+            hacer_trayectoria(figuras,pub)
+        elif key=='6':
+            hacer_trayectoria(puntos_eq,pub)
+        elif key=='7':
+            hacer_trayectoria(dibujo,pub)
+        elif key=='8':
+            hacer_trayectoria(dejar_marcador,pub)
 ```
 Aquí se usan las funciones hacer_trayectoria() e ir_a_punto() que están definidas así:
 ```
-//Codigo2
+def ir_a_punto(q, pub):	
+    state = JointTrajectory()
+    state.header.stamp = rospy.Time.now()
+    state.joint_names = ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5"]
+    point = JointTrajectoryPoint()
+    point.positions = [q[0], q[1], q[2], q[3], q[4]]    
+    point.time_from_start = rospy.Duration(0.05)
+    state.points.append(point)
+    pub.publish(state)
+    #print('published command')
+    rospy.sleep(0.7)
+    
+def hacer_trayectoria(puntos,pub):
+    for i in puntos:
+        ir_a_punto(i,pub)
 ```
 Para que el robot realice las rutinas se debe conectar al puerto USB, se debe abrir un terminal y escribir el comando:
 ```
