@@ -290,6 +290,9 @@ Luego de esto el programa está listo para recibir instrucciones.
   
   [![image](https://user-images.githubusercontent.com/112737454/200102165-fc58a3ba-2547-4045-bba1-ca9f0f1bf7e7.png)](https://www.youtube.com/watch?v=T0nJiAJR6Ag&list=PLZO_90ooNtkvjKJZ4ga3Eclyv0Wju51Rj&index=5)
 
+ 5) Comparación de trayectorias
+  
+  ![image](https://user-images.githubusercontent.com/112737454/200155074-3b43c07f-d453-4802-9c38-3743463b6ee7.png)
 
 
 
